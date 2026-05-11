@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KHANÈYA</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #F5EEE6;
+      color: #3B2F2F;
+      scroll-behavior: smooth;
+    }
+
+    .hero-overlay {
+      background: rgba(0,0,0,0.35);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-[#F5EEE6]/80 backdrop-blur-md border-b border-[#E5D8CC]">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-end items-center">
+      <nav class="hidden md:flex gap-8 text-sm tracking-wide text-[#5B4636]">
+        <a href="#home" class="hover:opacity-60 transition">Home</a>
+        <a href="#collection" class="hover:opacity-60 transition">Collection</a>
+        <a href="#about" class="hover:opacity-60 transition">About</a>
+        <a href="#lookbook" class="hover:opacity-60 transition">Lookbook</a>
+        <a href="#contact" class="hover:opacity-60 transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+
+    <img
+      src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1600&auto=format&fit=crop"
+      class="absolute inset-0 w-full h-full object-cover"
+      alt="Hero"
+    />
+
+    <div class="absolute inset-0 hero-overlay"></div>
+
+    <div class="relative z-10 text-center text-white px-6 max-w-4xl">
+
+      <p class="uppercase tracking-[0.35em] text-sm mb-6 opacity-80">
+        Premium Fashion Brand
+      </p>
+
+      <h1 class="text-5xl md:text-7xl font-light leading-tight mb-6">
+        Timeless Pieces <br>
+        For The Modern Girls.
+      </h1>
+
+      <p class="text-base md:text-lg opacity-90 leading-relaxed mb-10">
+        KHANÈYA menghadirkan fashion perempuan dengan desain feminine,
+        modern, dan effortless untuk daily style yang classy.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+
+        <a href="#collection"
+          class="bg-[#E8DCCF] text-[#3B2F2F] px-8 py-4 rounded-full text-sm tracking-wide hover:bg-[#DCC7B5] transition">
+          Explore Collection
+        </a>
+
+        <a href="#lookbook"
+          class="border border-white px-8 py-4 rounded-full text-sm tracking-wide hover:bg-white hover:text-black transition">
+          View Lookbook
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-28 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+
+      <div>
+        <p class="uppercase tracking-[0.3em] text-sm text-[#8A6F5A] mb-4">
+          Our Story
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-light mb-8 leading-tight">
+          Fashion That Feels
+          <br>
+          Effortlessly Elegant.
+        </h2>
+
+        <p class="text-[#5C5C5C] leading-8 text-lg">
+          KHANÈYA lahir dari keinginan untuk menghadirkan fashion perempuan
+          yang tidak hanya mengikuti trend, tetapi juga memberikan rasa percaya diri
+          dalam setiap penampilan.
+        </p>
+      </div>
+
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1200&auto=format&fit=crop"
+          alt="About"
+          class="rounded-[2rem] shadow-2xl"
+        />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Collection -->
+  <section id="collection" class="py-28 px-6 bg-[#FFFDFB]">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center mb-16">
+        <p class="uppercase tracking-[0.3em] text-sm text-[#8A6F5A] mb-4">
+          Latest Collection
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-light">
+          Featured Pieces
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="bg-[#F8F1EA] rounded-[2rem] overflow-hidden shadow hover:shadow-2xl transition duration-500">
+          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=1200&auto=format&fit=crop"
+            class="h-[500px] w-full object-cover hover:scale-105 transition duration-700">
+
+          <div class="p-8">
+            <h3 class="text-2xl font-light mb-3">Leora Knit Cardigan</h3>
+            <p class="text-[#6E6E6E] leading-7">
+              Soft knit texture with feminine silhouette.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-[#F8F1EA] rounded-[2rem] overflow-hidden shadow hover:shadow-2xl transition duration-500">
+          <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop"
+            class="h-[500px] w-full object-cover hover:scale-105 transition duration-700">
+
+          <div class="p-8">
+            <h3 class="text-2xl font-light mb-3">Modern Muse Top</h3>
+            <p class="text-[#6E6E6E] leading-7">
+              Minimal clean-cut design for everyday styling.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-[#F8F1EA] rounded-[2rem] overflow-hidden shadow hover:shadow-2xl transition duration-500">
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop"
+            class="h-[500px] w-full object-cover hover:scale-105 transition duration-700">
+
+          <div class="p-8">
+            <h3 class="text-2xl font-light mb-3">Soft Form Collection</h3>
+            <p class="text-[#6E6E6E] leading-7">
+              Elegant essentials designed for modern girls.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lookbook -->
+  <section id="lookbook" class="py-28 px-6">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center mb-16">
+        <p class="uppercase tracking-[0.3em] text-sm text-[#8A6F5A] mb-4">
+          Style Inspiration
+        </p>
+
+        <h2 class="text-4xl md:text-5xl font-light">
+          KHANÈYA Lookbook
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <img
+          src="https://images.unsplash.com/photo-1495385794356-15371f348c31?q=80&w=1200&auto=format&fit=crop"
+          class="rounded-[2rem] h-[600px] object-cover w-full"
+        />
+
+        <img
+          src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop"
+          class="rounded-[2rem] h-[600px] object-cover w-full"
+        />
+
+        <img
+          src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop"
+          class="rounded-[2rem] h-[600px] object-cover w-full"
+        />
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24 px-6 bg-[#3B2F2F] text-white">
+
+    <div class="max-w-5xl mx-auto text-center">
+
+      <p class="uppercase tracking-[0.3em] text-sm opacity-70 mb-4">
+        Contact KHANÈYA
+      </p>
+
+      <h2 class="text-4xl md:text-5xl font-light mb-8">
+        Connect With Us
+      </h2>
+
+      <div class="space-y-4 text-lg">
+
+        <p>
+          WhatsApp:
+          <a href="https://wa.me/6282121257781" class="underline hover:opacity-70">
+            082121257781
+          </a>
+        </p>
+
+        <p>
+          Instagram:
+          <a href="https://www.instagram.com/khaneya.co/" target="_blank"
+            class="underline hover:opacity-70">
+            @khaneya.co
+          </a>
+        </p>
+
+        <p>
+          TikTok:
+          <a href="https://www.tiktok.com/@khaaanath?is_from_webapp=1&sender_device=pc"
+            target="_blank"
+            class="underline hover:opacity-70">
+            @khaaanath
+          </a>
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
