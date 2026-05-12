@@ -4,12 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KHANÈYA</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-
+<link rel="icon" type="image/png" href="favicon.png">  
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
+    html {
+  scroll-behavior: smooth;
+}
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       background-color: #F5EEE6;
       color: #3B2F2F;
       scroll-behavior: smooth;
@@ -18,12 +23,74 @@
     .hero-overlay {
       background: rgba(0,0,0,0.35);
     }
+    h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: -0.02em;
+}
+
+.hero-title {
+    font-size: 6rem;
+    line-height: 0.9;
+    font-weight: 300;
+}
+
+.luxury-button {
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+}
+
+.luxury-button:hover {
+    transform: translateY(-3px);
+    letter-spacing: 0.08em;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: -4px;
+    left: 0;
+    background: #3B2F2F;
+    transition: width 0.4s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.lookbook-card {
+    overflow: hidden;
+}
+
+.lookbook-card img {
+    transition: transform 0.8s ease;
+}
+
+.lookbook-card:hover img {
+    transform: scale(1.05);
+}
   </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
+  <div id="loader" class="fixed inset-0 bg-[#F5EEE6] z-[9999] flex items-center justify-center transition-opacity duration-1000">
+
+  <img 
+    src="favicon.png" 
+    alt="KHANÈYA Logo"
+    class="w-32 opacity-90 animate-pulse"
+  >
+
+</div>
   <!-- Navbar -->
   <header class="fixed top-0 left-0 w-full z-50 bg-[#F5EEE6]/80 backdrop-blur-md border-b border-[#E5D8CC]">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-end items-center">
@@ -50,30 +117,32 @@
 
     <div class="relative z-10 text-center text-white px-6 max-w-4xl">
 
-      <p class="uppercase tracking-[0.35em] text-sm mb-6 opacity-80">
-        Premium Fashion Brand
-      </p>
+    <p class="uppercase tracking-[0.35em] text-sm mb-6 opacity-80">
+  PREMIUM FASHION BRAND
+</p>
 
-      <h1 class="text-5xl md:text-7xl font-light leading-tight mb-6">
-        Timeless Pieces <br>
-        For The Modern Girls.
-      </h1>
+<h1 class="text-6xl md:text-8xl font-light leading-none mb-8">
+  Timeless Pieces <br>
+  For The Modern Girls.
+</h1>
 
-      <p class="text-base md:text-lg opacity-90 leading-relaxed mb-10">
-        KHANÈYA menghadirkan fashion perempuan dengan desain feminine,
-        modern, dan effortless untuk daily style yang classy.
-      </p>
+<p class="text-lg md:text-xl opacity-90 leading-relaxed max-w-4xl mx-auto mb-10">
+  KHANÈYA menghadirkan fashion perempuan dengan desain feminine,
+  modern, dan effortless untuk daily style yang classy.
+</p>
 
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
 
-        <a href="#collection"
-          class="bg-[#E8DCCF] text-[#3B2F2F] px-8 py-4 rounded-full text-sm tracking-wide hover:bg-[#DCC7B5] transition">
+       <a href="#collection"
+class="luxury-button bg-[#E8DCCF] text-[#3B2F2F] px-8 py-4 rounded-full text-sm tracking-wide">
           Explore Collection
         </a>
 
-        <a href="#lookbook"
-          class="border border-white px-8 py-4 rounded-full text-sm tracking-wide hover:bg-white hover:text-black transition">
-          View Lookbook
+   <a href="#lookbook"
+class="luxury-button border border-white px-8 py-4 rounded-full text-sm tracking-wide hover:bg-white hover:text-[#3B2F2F] transition duration-500">
+    View Lookbook
+</a>
+        
         </a>
 
       </div>
@@ -252,6 +321,20 @@
       </div>
     </div>
   </section>
+<script>
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+
+    setTimeout(() => {
+      loader.style.opacity = "0";
+
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 1000);
+
+    }, 1800);
+  });
+</script>
 
 </body>
 </html>
